@@ -16,11 +16,12 @@ RUN set -eux \
  && mkdir -p "$FILEBOT_HOME" \
  && tar --extract --file /filebot.tar.xz --directory "$FILEBOT_HOME" --verbose \
  && rm /filebot.tar.xz \
- # Fix filebot lib
- && ln -sf /lib/libz.so /filebot/lib/Linux-aarch64/libz.so \
- && ln -sf /usr/lib/libzen.so /filebot/lib/Linux-aarch64/libzen.so \
- && ln -sf /usr/lib/libmediainfo.so /filebot/lib/Linux-aarch64/libmediainfo.so \
- && rm -rf /filebot/lib/FreeBSD-amd64 /filebot/lib/Linux-armv7l /filebot/lib/Linux-x86_64 /filebot/lib/Linux-i686
+ 
+ # Fix filebot libs
+ && ln -sf /lib/libz.so /opt/filebot/lib/Linux-aarch64/libz.so \
+ && ln -sf /usr/lib/libzen.so /opt/filebot/lib/Linux-aarch64/libzen.so \
+ && ln -sf /usr/lib/libmediainfo.so /opt/filebot/lib/Linux-aarch64/libmediainfo.so \
+ && rm -rf /filebot/lib/FreeBSD-amd64 /opt/filebot/lib/Linux-armv7l /filebot/lib/Linux-x86_64 /filebot/lib/Linux-i686
  
 VOLUME /data
 VOLUME /volume1
