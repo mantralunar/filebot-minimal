@@ -1,20 +1,11 @@
 FROM openjdk:14-alpine
-
-
 MAINTAINER Reinhard Pointner <rednoah@filebot.net>
-
 
 ENV FILEBOT_VERSION 4.9.2
 ENV FILEBOT_URL https://get.filebot.net/filebot/FileBot_$FILEBOT_VERSION/FileBot_$FILEBOT_VERSION-portable.tar.xz
 ENV FILEBOT_SHA256 9f12000925b46c46fff1297174e07590e7a1c1e4eab670ad4bec3b4051559e41
 
-
 ENV FILEBOT_HOME /opt/filebot
-
-
-# BROKEN PACKAGES
-# mediainfo: Segmentation fault
-# chromaprint: chromaprint (missing): required by: world[chromaprint]
 
 RUN apk add --update p7zip unrar \
  && rm -rf /var/cache/apk/*
