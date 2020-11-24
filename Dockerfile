@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 openjdk:11-alpine
+FROM adoptopenjdk/openjdk11:alpine
 
 MAINTAINER Reinhard Pointner <rednoah@filebot.net>
 
