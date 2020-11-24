@@ -1,4 +1,5 @@
-FROM openjdk:14-alpine
+#FROM openjdk:14-alpine
+FROM alpine:latest
 MAINTAINER Reinhard Pointner <rednoah@filebot.net>
 
 ENV FILEBOT_VERSION 4.9.2
@@ -7,8 +8,13 @@ ENV FILEBOT_SHA256 9f12000925b46c46fff1297174e07590e7a1c1e4eab670ad4bec3b4051559
 
 ENV FILEBOT_HOME /opt/filebot
 
-RUN apk add --update p7zip unrar \
- && rm -rf /var/cache/apk/*
+RUN apk add --no-cache \
+    p7zip \
+    unrar \
+    chromaprint \
+    openjdk11 \
+    openjdk11-jre \
+    zlib-dev 
 
 RUN set -eux \
  && wget -O /filebot.tar.xz "$FILEBOT_URL" \
