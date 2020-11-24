@@ -16,8 +16,7 @@ RUN apk add --no-cache \
     openjdk11-jre \
     zlib-dev 
 
-RUN set -eux \
- && wget -O /filebot.tar.xz "$FILEBOT_URL" \
+RUN wget -O /filebot.tar.xz "$FILEBOT_URL" \
  && echo "$FILEBOT_SHA256 */filebot.tar.xz" | sha256sum -c - \
  && mkdir -p "$FILEBOT_HOME" \
  && tar --extract --file /filebot.tar.xz --directory "$FILEBOT_HOME" --verbose \
