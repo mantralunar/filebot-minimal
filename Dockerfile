@@ -1,5 +1,4 @@
-#FROM openjdk:14-alpine
-FROM arm64v8/alpine:latest
+FROM openjdk:14-alpine
 MAINTAINER Reinhard Pointner <rednoah@filebot.net>
 
 ENV FILEBOT_VERSION 4.9.2
