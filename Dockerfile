@@ -28,7 +28,7 @@ RUN set -eux \
  && ln -sf /usr/lib/libzen.so /opt/filebot/lib/Linux-aarch64/libzen.so \
  && ln -sf /usr/lib/libmediainfo.so /opt/filebot/lib/Linux-aarch64/libmediainfo.so \
  && rm -rf /filebot/lib/FreeBSD-amd64 /opt/filebot/lib/Linux-armv7l /filebot/lib/Linux-x86_64 /filebot/lib/Linux-i686 \
- && chmod a+x "/opt/filebot/filebot.sh"
+ && chmod +x "/opt/filebot/filebot.sh"
  
 VOLUME /data
 VOLUME /volume1
