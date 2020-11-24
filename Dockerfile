@@ -10,10 +10,10 @@ ENV FILEBOT_SHA256 9f12000925b46c46fff1297174e07590e7a1c1e4eab670ad4bec3b4051559
 ENV FILEBOT_HOME /opt/filebot
 
 RUN apk add --update --no-cache \
-    p7zip \
-    unrar \
+#    p7zip \
+#    unrar \
 #   chromaprint \
-#   openjdk11 \
+   openjdk11 \
 #   openjdk11-jre \
     zlib-dev 
 
