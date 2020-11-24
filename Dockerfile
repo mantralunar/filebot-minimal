@@ -28,7 +28,8 @@ RUN set -eux \
  && ln -sf /usr/lib/libzen.so /opt/filebot/lib/Linux-aarch64/libzen.so \
  && ln -sf /usr/lib/libmediainfo.so /opt/filebot/lib/Linux-aarch64/libmediainfo.so \
  && rm -rf /filebot/lib/FreeBSD-amd64 /opt/filebot/lib/Linux-armv7l /filebot/lib/Linux-x86_64 /filebot/lib/Linux-i686 \
- && chmod +x "/opt/filebot/filebot.sh"
+
+RUN chmod +x "/opt/filebot/filebot.sh"
  
 VOLUME /data
 VOLUME /volume1
@@ -39,4 +40,4 @@ ENV FILEBOT_OPTS "-Dapplication.deployment=docker -Dnet.filebot.archive.extracto
 
 WORKDIR /volume1
 
-ENTRYPOINT bash /opt/filebot/filebot.sh
+ENTRYPOINT ["bash", "/opt/filebot/filebot.sh"]
