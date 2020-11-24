@@ -38,4 +38,4 @@ ENV FILEBOT_OPTS "-Dapplication.deployment=docker -Dnet.filebot.archive.extracto
 
 WORKDIR /volume1
 
-ENTRYPOINT ["/opt/filebot/filebot.sh"]
+ENTRYPOINT /opt/filebot/filebot.sh
