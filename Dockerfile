@@ -10,9 +10,9 @@ ENV FILEBOT_HOME /opt/filebot
 RUN apk add --no-cache \
     p7zip \
     unrar \
-    chromaprint \
-    openjdk11 \
-    openjdk11-jre \
+#   chromaprint \
+#   openjdk11 \
+#   openjdk11-jre \
     zlib-dev 
 
 RUN wget -O /filebot.tar.xz "$FILEBOT_URL" \
