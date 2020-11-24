@@ -7,7 +7,7 @@ ENV FILEBOT_SHA256 9f12000925b46c46fff1297174e07590e7a1c1e4eab670ad4bec3b4051559
 
 ENV FILEBOT_HOME /opt/filebot
 
-RUN apk add --no-cache \
+RUN apk add --update --no-cache \
     p7zip \
     unrar \
 #   chromaprint \
