@@ -1,4 +1,5 @@
-FROM --platform=linux/arm64 alpine:3.12
+FROM --platform=linux/arm64 openjdk:11-alpine
+
 MAINTAINER Reinhard Pointner <rednoah@filebot.net>
 
 ARG TARGETPLATFORM
@@ -13,7 +14,7 @@ RUN apk add --update --no-cache \
 #    p7zip \
 #    unrar \
 #   chromaprint \
-   openjdk11 \
+#   openjdk11 \
 #   openjdk11-jre \
     zlib-dev 
 
