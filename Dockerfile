@@ -1,5 +1,5 @@
 #FROM openjdk:14-alpine
-FROM alpine:latest
+FROM arm64v8/alpine:latest
 MAINTAINER Reinhard Pointner <rednoah@filebot.net>
 
 ENV FILEBOT_VERSION 4.9.2
@@ -41,4 +41,4 @@ ENV FILEBOT_OPTS "-Dapplication.deployment=docker -Dnet.filebot.archive.extracto
 WORKDIR /volume1
 
 #CMD ["/bin/sh"]
-ENTRYPOINT ["/bin/sh", "/opt/filebot/filebot.sh"]
+CMD ["/bin/sh", "/opt/filebot/filebot.sh"]
